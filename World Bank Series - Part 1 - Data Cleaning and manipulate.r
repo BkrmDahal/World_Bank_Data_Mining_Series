@@ -1,4 +1,4 @@
-##########################################Data cleaning and manipulate ##########################################
+##########################################Data cleaning and manipulation ##########################################
 ###download world bank data "http://data.worldbank.org/products/wdi" >> "Data catalog downloads (Excel | CSV)">>  "CSV"
 ##unzip and keep in directory of your choice my is "M:/R_scripts/Combine"
 
