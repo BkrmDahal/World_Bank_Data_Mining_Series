@@ -65,5 +65,5 @@ i_name_sub = subset(i_name, i_name$`Indicator Name`=="Foreign direct investment,
 wdi_sub = left_join(country_sub, wdi_sub)
 wdi_sub = left_join(i_name_sub, wdi_sub)
 
-######################################################################Bikram Dahal################################
+###########################################################Bikram Dahal############################################
 
