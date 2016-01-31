@@ -1,4 +1,4 @@
-##########################################Data cleaning and manuplicaion ##########################################
+##########################################WBS - Part 2 - Data Data Visualization ##########################################
 ###download world bank data "http://data.worldbank.org/products/wdi" >> "Data catalog downloads (Excel | CSV)">>  "CSV"
 ##unzip and keep in directory of your choice my is "M:/R_scripts/Combine"
 
@@ -43,8 +43,7 @@ country_sub = subset(country, country$`Currency Unit`!="" ,
 colnames(country_sub) <- c("Country Name", "Region")
 
 ##lets get only one Topic
-
-# i_name_sub = subset(i_name, i_name$Topic=="Public Sector: Defense & arms trade", select="Indicator Name")
+ i_name_sub = subset(i_name, i_name$Topic=="Public Sector: Defense & arms trade", select="Indicator Name")
 
 ##OR get particular Indicator Name
 
