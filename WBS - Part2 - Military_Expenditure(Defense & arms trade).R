@@ -1,5 +1,5 @@
 ##########################################Data cleaning and manuplicaion ##########################################
-###download world bank data 
+###download world bank data "http://data.worldbank.org/products/wdi" >> "Data catalog downloads (Excel | CSV)">>  "CSV"
 ##unzip and keep in directory of your choice my is "M:/R_scripts/Combine"
 
 
@@ -89,9 +89,13 @@ M = gvisMotionChart(wdi_sub, idvar = "Country.Name", timevar = "years", colorvar
                     options = list(width = 700, height = 600), chartid= "country_gdp")
 
 plot(M)
+
+###Save the file 
 setwd(filepath)
 dir.create("Output")
 setwd(paste(filepath, "Output", sep="/"))
 write.csv(wdi_sub, file="seller_top_level_status.csv")
 setwd(filepath)
 rm(list=ls())
+
+###########################################################Bikram Dahal############################################
