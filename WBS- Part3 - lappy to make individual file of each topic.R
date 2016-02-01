@@ -73,3 +73,10 @@ lapply(i_name_sub, function(x){
   write.csv(wdi_sub_temp, file=csvname, row.names = F)
   setwd(filepath)
 })
+
+###total of 91 file will be produced
+###You can find all 91 file here https://www.dropbox.com/sh/sk7f7uoz9t7mb38/AACxA8gGTXZJV90CycB4uT_Ka?dl=0
+##download anyfile you need and play around.
+#happy coding
+
+#######################################################Bikram dahal########################################
