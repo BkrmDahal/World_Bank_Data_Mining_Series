@@ -52,30 +52,25 @@ wdi_sub = left_join(country_sub, wdi_sub)
 wdi_sub = left_join(i_name_sub, wdi_sub)
 
 ####lets gather all data into narrow form 
-
 wdi_sub = gather(wdi_sub, "years", "sample", 4:59)
 
 #### Rename for easy handling
-
 colnames(wdi_sub) <- c("Indicator.Name", "Country.Name","Region" ,"years", "Value")
 
 #### lets put indicator name in colume name
-
 wdi_sub = dcast(wdi_sub, Country.Name+years+Region~Indicator.Name, value.var = "Value", na.rm = T )
 
 ###add month and day for motion chart 
-
 wdi_sub$years = paste(wdi_sub$years,"-01-01", sep="")
-
 wdi_sub$years=as.Date(wdi_sub$years, "%Y-%m-%d")
 
 
 ###google motion chart 
 M = gvisMotionChart(wdi_sub, idvar = "Country.Name", timevar = "years", colorvar = "Region",
-                    
-                    options = list(width = 700, height = 600), chartid= "country_gdp")
-
+                     options = list(width = 700, height = 600), chartid= "country_gdp")
 plot(M)
+
+###save file
 setwd(filepath)
 dir.create("Output")
 setwd(paste(filepath, "Output", sep="/"))
