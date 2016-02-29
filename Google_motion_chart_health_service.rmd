@@ -5,7 +5,9 @@ date: "February 29, 2016"
 output: html_document
 ---
 **Health Care in world**
-Stat of Health care service of all country from 1960 to 2015.Data is taken from world bank report. Input > Detail of code > <https://github.com/BkrmDahal> and my blog <https://r-python.blogspot.com>
+Stat of Health care service of all country from 1960 to 2015.Data is taken from world bank
+report. Input > Detail of code > <https://github.com/BkrmDahal/World_Bank_Data_Mining_Series> 
+and my blog <https://r-python.blogspot.com>
 
 
 ```{r, echo=F}
@@ -27,3 +29,5 @@ M = gvisMotionChart(bob, idvar = "Country.Name", timevar = "years", colorvar = "
                     options = list(width = 700, height = 600), chartid= "country_gdp")
 plot(M)
 ```
+###########################################################################
+**HAPPY CODING**
