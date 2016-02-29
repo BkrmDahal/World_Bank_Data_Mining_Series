@@ -1,0 +1,29 @@
+---
+title: "Health Care Service"
+author: "Bikram Dahal"
+date: "February 29, 2016"
+output: html_document
+---
+**Health Care in world**
+Stat of Health care service of all country from 1960 to 2015.Data is taken from world bank report. Input > Detail of code > <https://github.com/BkrmDahal> and my blog <https://r-python.blogspot.com>
+
+
+```{r, echo=F}
+##load required package
+require("dplyr")
+library(googleVis)
+op <- options(gvis.plot.tag='chart')
+
+
+# Import BOB and change date string to date
+setwd("E:/R_Script")
+filepath=getwd()
+setwd(paste(filepath, "Input", sep="/"))
+
+bob=read.csv("Health, Health services .csv")
+bob$years=as.Date(bob$years, "%Y-%m-%d")
+
+M = gvisMotionChart(bob, idvar = "Country.Name", timevar = "years", colorvar = "Region",
+                    options = list(width = 700, height = 600), chartid= "country_gdp")
+plot(M)
+```
